@@ -1,0 +1,47 @@
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (7749,'Traci', 'Davidai', '6164 Prentice Point', '75008');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (6764, 'Geordie', 'Lintall', '3 Judy Crossing','13001' );
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (4451, 'Brittni', 'Deware', '607 Dawn Plaza', '93600');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (4688, 'Sibbie', 'Maryin', '7641 Lillian Court', '75016');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (3765, 'Matthieu', 'Gierok', '36 Carioca Place', '93270');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (5385, 'Aaron', 'Dykes', '5 Lawn Center', '33120');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (4621, 'Arty', 'Goch', '061 Dapin Place', '93300');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (1647, 'Raffarty', 'Maudsley', '10989 Eastwood Park', '29000');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (2780, 'Sephira', 'McQuade', '289 Jackson Lane', '35019');
+insert into titulaire (code, prenom, nom, adresse, code_postal) values (8536, 'Anjanette', 'Inkles', '9 Aberg Point', '49000');
+
+insert into type_compte (code_type, intitule) values ('C', 'Compte_courant');
+insert into type_compte (code_type, intitule) values ('E', 'Epargne');
+insert into type_compte (code_type, intitule) values ('P', 'Plan_epargne_logement');
+insert into type_compte (code_type, intitule) values ('A', 'Assurance_vie');
+
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (21433, 'E', 904.40, 7749);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (49703, 'C', 1813.48, 6764);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (72338, 'C', 3355.57, 4451);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (46730, 'P', 2664.03, 4688);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (58980, 'C', 3732.98, 3765);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (90473, 'E', 4705.07, 5385);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (06431, 'A', 2900.98, 4621);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (60778, 'C', 4004.47, 1647);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (81863, 'C', 1964.48, 2780);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (76367, 'E', 1579.30, 8536);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (90487, 'A', 4705.07, 5385);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (06981, 'C', 2900.98, 4621);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (60767, 'P', 4004.47, 1647);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (81898, 'E', 1964.48, 2780);
+insert into compte (num_compte, code_type_compte, solde_compte, code_titulaire) values (76378, 'P', 1579.30, 8536);
+
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (21433, '2021-05-12', 'Retrait', 1189.80, 'R');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (49703, '2021-02-02', 'Retrait', 293.91, 'R');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (72338, '2021-04-23', 'Virement', 1838.61, 'V');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (46730, '2020-06-04', 'Dépôt', 893.81, 'D');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (58980, '2020-09-01', 'Retrait', 345.57, 'R');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (90473, '2020-06-02', 'Dépôt', 559.35, 'D');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (06431, '2020-07-03', 'Prélèvement', 300.65, 'P');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (60778, '2020-11-03', 'Dépôt', 1525.34, 'D');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (81863, '2020-10-01', 'Retrait', 14.88, 'R');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (76367, '2020-07-03', 'Retrait', 1564.33, 'R');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (90473, '2020-06-02', 'Dépôt', 559.35, 'D');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (06981, '2020-07-03', 'Prélèvement', 300.65, 'P');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (60767, '2020-12-03', 'Dépôt', 1525.34, 'D');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (81898, '2020-12-01', 'Retrait', 14.88, 'R');
+insert into operation (num_compte, date_op, lib_op, montant, type_op) values (76378, '2020-07-03', 'Retrait', 1564.33, 'R');
