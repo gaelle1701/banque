@@ -2,8 +2,10 @@ package com.banque.utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 
 public class Utils {
@@ -23,14 +25,18 @@ public class Utils {
             String type = result.getMetaData().getColumnTypeName(i);
             if(type == "INT"){
                 method = c.getDeclaredMethod(s1, Integer.class);
+                     method.invoke(o, result.getObject(i));
             }else if(type == "VARCHAR" || type == "CHAR"){
                 method = c.getDeclaredMethod(s1, String.class);
-            }else if(type == "DATE"){
-                method = c.getDeclaredMethod(s1, String.class);
+                     method.invoke(o, result.getObject(i));
             }else if(type == "FLOAT"){
-                method = c.getDeclaredMethod(s1, Float.class);
+                method = c.getDeclaredMethod(s1, float.class);
+                     method.invoke(o, result.getObject(i));
+            }else if(type == "DATE"){
+                method = c.getDeclaredMethod(s1, Date.class);
+                method.invoke(o, result.getObject(i));
             }
-            method.invoke(o, result.getObject(i));
+
         }
         return o;
     }
